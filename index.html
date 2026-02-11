@@ -56,28 +56,23 @@
 
         .container {
             width: 100%;
-            max-width: 460px;
+            max-width: 420px;
             padding: 20px;
             position: relative;
             z-index: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
         }
 
         .login-card {
             background: rgba(255, 255, 255, 0.98);
             backdrop-filter: blur(20px);
             border-radius: 20px;
-            padding: 40px 32px;
+            padding: 40px 35px;
             box-shadow: 
                 0 20px 60px rgba(0, 0, 0, 0.3),
                 0 0 0 1px rgba(255, 255, 255, 0.1);
             text-align: center;
             transform: translateY(0);
             transition: transform 0.3s ease;
-            width: 100%;
         }
 
         .login-card:hover {
@@ -86,33 +81,29 @@
 
         .logo-container {
             position: relative;
-            width: 320px;
-            height: 320px;
-            margin: 0 auto 30px;
+            width: 75px;
+            height: 75px;
+            margin: 0 auto 20px;
         }
 
         .logo {
-            width: 320px;
-            height: 320px;
+            width: 75px;
+            height: 75px;
             background: linear-gradient(135deg, #293854 0%, #4a6fa5 100%);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             position: relative;
-            box-shadow: 0 20px 50px rgba(41, 56, 84, 0.6);
+            box-shadow: 0 10px 30px rgba(41, 56, 84, 0.4);
             animation: pulse 2s ease-in-out infinite;
-            overflow: hidden;
-            padding: 50px;
+            padding: 12px;
         }
 
         .logo img {
             width: 100%;
             height: 100%;
             object-fit: contain;
-            background: rgba(255, 255, 255, 0.98);
-            border-radius: 50%;
-            padding: 20px;
         }
 
         @keyframes pulse {
@@ -141,20 +132,20 @@
         h1 {
             color: #1a1a2e;
             margin-bottom: 6px;
-            font-size: 28px;
+            font-size: 26px;
             font-weight: 700;
             letter-spacing: -0.5px;
         }
 
         .subtitle {
             color: #6b7280;
-            margin-bottom: 35px;
-            font-size: 15px;
+            margin-bottom: 28px;
+            font-size: 14px;
             font-weight: 400;
         }
 
         .input-group {
-            margin-bottom: 22px;
+            margin-bottom: 20px;
             text-align: left;
             position: relative;
         }
@@ -185,7 +176,7 @@
 
         input {
             width: 100%;
-            padding: 15px 15px 15px 44px;
+            padding: 14px 14px 14px 44px;
             border: 2px solid #e5e7eb;
             border-radius: 10px;
             font-size: 15px;
@@ -224,16 +215,16 @@
 
         .btn-login {
             width: 100%;
-            padding: 15px;
+            padding: 14px;
             background: linear-gradient(135deg, #293854 0%, #4a6fa5 100%);
             color: white;
             border: none;
             border-radius: 10px;
-            font-size: 16px;
+            font-size: 15px;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
-            margin-top: 10px;
+            margin-top: 8px;
             box-shadow: 0 4px 15px rgba(41, 56, 84, 0.4);
             position: relative;
             overflow: hidden;
@@ -285,7 +276,7 @@
         .environment-selector {
             display: none;
             width: 100%;
-            max-width: 460px;
+            max-width: 520px;
             padding: 20px;
             position: relative;
             z-index: 1;
@@ -382,13 +373,13 @@
         }
 
         .env-option.production .env-icon {
-            background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
-            box-shadow: 0 4px 12px rgba(186, 230, 253, 0.5);
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
         }
 
         .env-option.homologacao .env-icon {
-            background: linear-gradient(135deg, #293854 0%, #4a6fa5 100%);
-            box-shadow: 0 4px 12px rgba(41, 56, 84, 0.3);
+            background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+            box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
         }
 
         .env-info {
@@ -419,13 +410,13 @@
         }
 
         .env-option.production .env-badge {
-            background: #e0f2fe;
-            color: #0c4a6e;
+            background: #d1fae5;
+            color: #065f46;
         }
 
         .env-option.homologacao .env-badge {
-            background: #dde5ef;
-            color: #293854;
+            background: #ede9fe;
+            color: #5b21b6;
         }
 
         .env-description {
@@ -515,13 +506,13 @@
         }
 
         .dashboard-header {
-            background: linear-gradient(135deg, #293854 0%, #4a6fa5 100%);
-            padding: 16px 32px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+            background: white;
+            padding: 18px 32px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid #e5e7eb;
             transition: all 0.3s ease;
         }
 
@@ -532,41 +523,19 @@
         .user-info {
             display: flex;
             align-items: center;
-            gap: 18px;
-        }
-
-        .header-logo {
-            width: 64px;
-            height: 64px;
-            background: white;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 10px;
-            box-shadow: 
-                0 4px 15px rgba(41, 56, 84, 0.5),
-                0 0 0 3px rgba(41, 56, 84, 0.3),
-                inset 0 0 0 1px rgba(41, 56, 84, 0.1);
-            border: 2px solid rgba(41, 56, 84, 0.4);
-        }
-
-        .header-logo img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
+            gap: 16px;
         }
 
         .dashboard-title {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            gap: 4px;
+            gap: 3px;
         }
 
         .dashboard-title-main {
-            font-size: 22px;
-            color: white;
+            font-size: 17px;
+            color: #4b5563;
             font-weight: 600;
             display: flex;
             align-items: center;
@@ -574,23 +543,23 @@
         }
 
         .dashboard-title-sub {
-            font-size: 15px;
-            color: rgba(255, 255, 255, 0.8);
+            font-size: 13px;
+            color: #6b7280;
             font-weight: 500;
+            margin-left: 30px;
         }
 
         .user-badge {
-            background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
-            color: #0c4a6e;
+            background: linear-gradient(135deg, #293854 0%, #4a6fa5 100%);
+            color: white;
             padding: 8px 16px;
             border-radius: 20px;
             font-size: 13px;
             font-weight: 600;
-            box-shadow: 0 2px 8px rgba(186, 230, 253, 0.4);
+            box-shadow: 0 2px 8px rgba(41, 56, 84, 0.3);
             display: flex;
             align-items: center;
             gap: 6px;
-            border: 1px solid rgba(14, 165, 233, 0.3);
         }
 
         .user-badge::before {
@@ -606,18 +575,16 @@
             display: flex;
             align-items: center;
             gap: 6px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
         .env-indicator.production {
-            background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
-            color: #0c4a6e;
-            border: 1px solid rgba(14, 165, 233, 0.3);
+            background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+            color: #065f46;
         }
 
         .env-indicator.homologacao {
-            background: rgba(255, 255, 255, 0.2);
-            color: white;
+            background: linear-gradient(135deg, #ede9fe 0%, #ddd6fe 100%);
+            color: #5b21b6;
         }
 
         .header-actions {
@@ -628,31 +595,30 @@
 
         .btn-change-env {
             padding: 10px 20px;
-            background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
-            color: #0c4a6e;
-            border: 1px solid rgba(14, 165, 233, 0.3);
+            background: linear-gradient(135deg, #293854 0%, #4a6fa5 100%);
+            color: white;
+            border: none;
             border-radius: 8px;
             cursor: pointer;
             font-weight: 600;
             transition: all 0.3s;
             font-size: 14px;
-            box-shadow: 0 2px 8px rgba(186, 230, 253, 0.4);
+            box-shadow: 0 2px 8px rgba(41, 56, 84, 0.3);
             display: flex;
             align-items: center;
             gap: 6px;
         }
 
         .btn-change-env:hover {
-            background: linear-gradient(135deg, #bae6fd 0%, #7dd3fc 100%);
             transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(186, 230, 253, 0.5);
+            box-shadow: 0 4px 12px rgba(41, 56, 84, 0.4);
         }
 
         .btn-fullscreen {
             padding: 10px 16px;
-            background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
-            color: #0c4a6e;
-            border: 1px solid rgba(14, 165, 233, 0.3);
+            background: #f3f4f6;
+            color: #6b7280;
+            border: none;
             border-radius: 8px;
             cursor: pointer;
             font-weight: 600;
@@ -660,13 +626,11 @@
             font-size: 20px;
             display: flex;
             align-items: center;
-            box-shadow: 0 2px 8px rgba(186, 230, 253, 0.4);
         }
 
         .btn-fullscreen:hover {
-            background: linear-gradient(135deg, #bae6fd 0%, #7dd3fc 100%);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(186, 230, 253, 0.5);
+            background: #e5e7eb;
+            color: #374151;
         }
 
         .btn-logout {
@@ -687,7 +651,7 @@
         }
 
         .dashboard-content {
-            height: calc(100vh - 96px);
+            height: calc(100vh - 70px);
             padding: 0;
             position: relative;
             transition: height 0.3s ease;
@@ -887,27 +851,12 @@
         }
 
         @media (max-width: 768px) {
-            .container {
-                max-width: 95%;
-            }
-
             .login-card, .environment-card {
                 padding: 35px 28px;
             }
 
-            .logo-container {
-                width: 260px;
-                height: 260px;
-            }
-
-            .logo {
-                width: 260px;
-                height: 260px;
-                padding: 40px;
-            }
-
             h1 {
-                font-size: 26px;
+                font-size: 24px;
             }
 
             .dashboard-header {
@@ -917,21 +866,16 @@
             }
 
             .user-info {
-                gap: 12px;
+                gap: 10px;
                 flex-wrap: wrap;
             }
 
-            .header-logo {
-                width: 56px;
-                height: 56px;
-            }
-
             .dashboard-title-main {
-                font-size: 20px;
+                font-size: 16px;
             }
 
             .dashboard-title-sub {
-                font-size: 14px;
+                font-size: 12px;
             }
 
             .user-badge {
@@ -965,7 +909,7 @@
         <div class="login-card">
             <div class="logo-container">
                 <div class="logo">
-                    <img src="logo.png" alt="Logo da Empresa">
+                    <img src="logo.png" alt="Logo InsightHub">
                 </div>
             </div>
             <h1>InsightHub</h1>
@@ -1062,11 +1006,11 @@
         </button>
         <div class="dashboard-header" id="dashboardHeader">
             <div class="user-info">
-                <div class="header-logo">
-                    <img src="logo.png" alt="Logo">
-                </div>
                 <div class="dashboard-title">
-                    <div class="dashboard-title-main" id="dashboardTitleMain">InsightHub</div>
+                    <div class="dashboard-title-main">
+                        <span>📊</span>
+                        <span id="dashboardTitleMain">InsightHub</span>
+                    </div>
                     <div class="dashboard-title-sub" id="dashboardTitleSub"></div>
                 </div>
                 <div class="user-badge" id="userBadge"></div>
