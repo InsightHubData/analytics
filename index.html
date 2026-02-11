@@ -81,14 +81,14 @@
 
         .logo-container {
             position: relative;
-            width: 160px;
-            height: 160px;
+            width: 140px;
+            height: 140px;
             margin: 0 auto 20px;
         }
 
         .logo {
-            width: 160px;
-            height: 160px;
+            width: 140px;
+            height: 140px;
             background: white;
             border-radius: 50%;
             display: flex;
@@ -98,7 +98,7 @@
             box-shadow: 0 10px 30px rgba(41, 56, 84, 0.4);
             animation: pulse 2s ease-in-out infinite;
             overflow: hidden;
-            padding: 25px;
+            padding: 18px;
         }
 
         .logo img {
@@ -374,8 +374,8 @@
         }
 
         .env-option.production .env-icon {
-            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+            background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
+            box-shadow: 0 4px 12px rgba(186, 230, 253, 0.5);
         }
 
         .env-option.homologacao .env-icon {
@@ -411,8 +411,8 @@
         }
 
         .env-option.production .env-badge {
-            background: #d1fae5;
-            color: #065f46;
+            background: #e0f2fe;
+            color: #0c4a6e;
         }
 
         .env-option.homologacao .env-badge {
@@ -528,15 +528,19 @@
         }
 
         .header-logo {
-            width: 65px;
-            height: 65px;
+            width: 75px;
+            height: 75px;
             background: white;
-            border-radius: 12px;
+            border-radius: 14px;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 10px;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+            padding: 12px;
+            box-shadow: 
+                0 4px 15px rgba(41, 56, 84, 0.5),
+                0 0 0 4px rgba(41, 56, 84, 0.3),
+                inset 0 0 0 1px rgba(41, 56, 84, 0.1);
+            border: 2px solid rgba(41, 56, 84, 0.4);
         }
 
         .header-logo img {
@@ -598,8 +602,9 @@
         }
 
         .env-indicator.production {
-            background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
-            color: #065f46;
+            background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
+            color: #0c4a6e;
+            border: 1px solid rgba(14, 165, 233, 0.3);
         }
 
         .env-indicator.homologacao {
@@ -894,8 +899,8 @@
             }
 
             .header-logo {
-                width: 55px;
-                height: 55px;
+                width: 65px;
+                height: 65px;
             }
 
             .dashboard-title-main {
