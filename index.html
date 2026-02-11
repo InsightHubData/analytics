@@ -81,14 +81,14 @@
 
         .logo-container {
             position: relative;
-            width: 120px;
-            height: 120px;
+            width: 150px;
+            height: 150px;
             margin: 0 auto 20px;
         }
 
         .logo {
-            width: 120px;
-            height: 120px;
+            width: 150px;
+            height: 150px;
             background: white;
             border-radius: 50%;
             display: flex;
@@ -98,7 +98,7 @@
             box-shadow: 0 10px 30px rgba(41, 56, 84, 0.4);
             animation: pulse 2s ease-in-out infinite;
             overflow: hidden;
-            padding: 15px;
+            padding: 20px;
         }
 
         .logo img {
@@ -508,7 +508,7 @@
 
         .dashboard-header {
             background: linear-gradient(135deg, #293854 0%, #4a6fa5 100%);
-            padding: 18px 32px;
+            padding: 12px 32px;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
             display: flex;
             justify-content: space-between;
@@ -528,15 +528,36 @@
         }
 
         .header-logo {
-            width: 45px;
-            height: 45px;
-            background: white;
-            border-radius: 10px;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #ffffff 0%, #f0f4f8 100%);
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 6px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            padding: 8px;
+            box-shadow: 
+                0 4px 12px rgba(41, 56, 84, 0.4),
+                0 0 0 3px rgba(41, 56, 84, 0.2);
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .header-logo::before {
+            content: '';
+            position: absolute;
+            inset: -4px;
+            background: linear-gradient(135deg, #293854 0%, #4a6fa5 100%);
+            border-radius: 14px;
+            opacity: 0.15;
+            z-index: -1;
+        }
+
+        .header-logo:hover {
+            transform: scale(1.05);
+            box-shadow: 
+                0 6px 16px rgba(41, 56, 84, 0.5),
+                0 0 0 3px rgba(41, 56, 84, 0.3);
         }
 
         .header-logo img {
@@ -568,14 +589,13 @@
         }
 
         .user-badge {
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(10px);
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
             color: white;
             padding: 8px 16px;
             border-radius: 20px;
             font-size: 13px;
             font-weight: 600;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
             display: flex;
             align-items: center;
             gap: 6px;
@@ -616,31 +636,31 @@
 
         .btn-change-env {
             padding: 10px 20px;
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(10px);
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
             color: white;
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            border: none;
             border-radius: 8px;
             cursor: pointer;
             font-weight: 600;
             transition: all 0.3s;
             font-size: 14px;
+            box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
             display: flex;
             align-items: center;
             gap: 6px;
         }
 
         .btn-change-env:hover {
-            background: rgba(255, 255, 255, 0.25);
+            background: linear-gradient(135deg, #059669 0%, #047857 100%);
             transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
         }
 
         .btn-fullscreen {
             padding: 10px 16px;
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(10px);
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
             color: white;
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            border: none;
             border-radius: 8px;
             cursor: pointer;
             font-weight: 600;
@@ -648,10 +668,13 @@
             font-size: 20px;
             display: flex;
             align-items: center;
+            box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
         }
 
         .btn-fullscreen:hover {
-            background: rgba(255, 255, 255, 0.25);
+            background: linear-gradient(135deg, #059669 0%, #047857 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
         }
 
         .btn-logout {
@@ -672,7 +695,7 @@
         }
 
         .dashboard-content {
-            height: calc(100vh - 70px);
+            height: calc(100vh - 88px);
             padding: 0;
             position: relative;
             transition: height 0.3s ease;
@@ -892,8 +915,8 @@
             }
 
             .header-logo {
-                width: 40px;
-                height: 40px;
+                width: 50px;
+                height: 50px;
             }
 
             .dashboard-title-main {
