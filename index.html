@@ -56,7 +56,7 @@
 
         .container {
             width: 100%;
-            max-width: 480px;
+            max-width: 460px;
             padding: 20px;
             position: relative;
             z-index: 1;
@@ -70,13 +70,14 @@
             background: rgba(255, 255, 255, 0.98);
             backdrop-filter: blur(20px);
             border-radius: 20px;
-            padding: 40px 35px;
+            padding: 40px 32px;
             box-shadow: 
                 0 20px 60px rgba(0, 0, 0, 0.3),
                 0 0 0 1px rgba(255, 255, 255, 0.1);
             text-align: center;
             transform: translateY(0);
             transition: transform 0.3s ease;
+            width: 100%;
         }
 
         .login-card:hover {
@@ -85,33 +86,33 @@
 
         .logo-container {
             position: relative;
-            width: 160px;
-            height: 160px;
-            margin: 0 auto 20px;
+            width: 320px;
+            height: 320px;
+            margin: 0 auto 30px;
         }
 
         .logo {
-            width: 160px;
-            height: 160px;
+            width: 320px;
+            height: 320px;
             background: linear-gradient(135deg, #293854 0%, #4a6fa5 100%);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             position: relative;
-            box-shadow: 0 10px 30px rgba(41, 56, 84, 0.4);
+            box-shadow: 0 20px 50px rgba(41, 56, 84, 0.6);
             animation: pulse 2s ease-in-out infinite;
             overflow: hidden;
-            padding: 22px;
+            padding: 50px;
         }
 
         .logo img {
             width: 100%;
             height: 100%;
             object-fit: contain;
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(255, 255, 255, 0.98);
             border-radius: 50%;
-            padding: 12px;
+            padding: 20px;
         }
 
         @keyframes pulse {
@@ -140,20 +141,20 @@
         h1 {
             color: #1a1a2e;
             margin-bottom: 6px;
-            font-size: 26px;
+            font-size: 28px;
             font-weight: 700;
             letter-spacing: -0.5px;
         }
 
         .subtitle {
             color: #6b7280;
-            margin-bottom: 28px;
-            font-size: 14px;
+            margin-bottom: 35px;
+            font-size: 15px;
             font-weight: 400;
         }
 
         .input-group {
-            margin-bottom: 20px;
+            margin-bottom: 22px;
             text-align: left;
             position: relative;
         }
@@ -184,7 +185,7 @@
 
         input {
             width: 100%;
-            padding: 14px 14px 14px 44px;
+            padding: 15px 15px 15px 44px;
             border: 2px solid #e5e7eb;
             border-radius: 10px;
             font-size: 15px;
@@ -223,16 +224,16 @@
 
         .btn-login {
             width: 100%;
-            padding: 14px;
+            padding: 15px;
             background: linear-gradient(135deg, #293854 0%, #4a6fa5 100%);
             color: white;
             border: none;
             border-radius: 10px;
-            font-size: 15px;
+            font-size: 16px;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
-            margin-top: 8px;
+            margin-top: 10px;
             box-shadow: 0 4px 15px rgba(41, 56, 84, 0.4);
             position: relative;
             overflow: hidden;
@@ -284,7 +285,7 @@
         .environment-selector {
             display: none;
             width: 100%;
-            max-width: 520px;
+            max-width: 460px;
             padding: 20px;
             position: relative;
             z-index: 1;
@@ -515,7 +516,7 @@
 
         .dashboard-header {
             background: linear-gradient(135deg, #293854 0%, #4a6fa5 100%);
-            padding: 12px 32px;
+            padding: 16px 32px;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
             display: flex;
             justify-content: space-between;
@@ -531,18 +532,18 @@
         .user-info {
             display: flex;
             align-items: center;
-            gap: 16px;
+            gap: 18px;
         }
 
         .header-logo {
-            width: 55px;
-            height: 55px;
+            width: 64px;
+            height: 64px;
             background: white;
-            border-radius: 10px;
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 4px;
+            padding: 10px;
             box-shadow: 
                 0 4px 15px rgba(41, 56, 84, 0.5),
                 0 0 0 3px rgba(41, 56, 84, 0.3),
@@ -560,7 +561,7 @@
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            gap: 3px;
+            gap: 4px;
         }
 
         .dashboard-title-main {
@@ -686,7 +687,7 @@
         }
 
         .dashboard-content {
-            height: calc(100vh - 88px);
+            height: calc(100vh - 96px);
             padding: 0;
             position: relative;
             transition: height 0.3s ease;
@@ -886,12 +887,27 @@
         }
 
         @media (max-width: 768px) {
+            .container {
+                max-width: 95%;
+            }
+
             .login-card, .environment-card {
                 padding: 35px 28px;
             }
 
+            .logo-container {
+                width: 260px;
+                height: 260px;
+            }
+
+            .logo {
+                width: 260px;
+                height: 260px;
+                padding: 40px;
+            }
+
             h1 {
-                font-size: 24px;
+                font-size: 26px;
             }
 
             .dashboard-header {
@@ -901,13 +917,13 @@
             }
 
             .user-info {
-                gap: 10px;
+                gap: 12px;
                 flex-wrap: wrap;
             }
 
             .header-logo {
-                width: 50px;
-                height: 50px;
+                width: 56px;
+                height: 56px;
             }
 
             .dashboard-title-main {
