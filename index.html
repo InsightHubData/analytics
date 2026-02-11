@@ -60,6 +60,9 @@
             padding: 20px;
             position: relative;
             z-index: 1;
+            display: flex;
+            align-items: center;
+            min-height: 100vh;
         }
 
         .login-card {
@@ -89,7 +92,7 @@
         .logo {
             width: 140px;
             height: 140px;
-            background: white;
+            background: linear-gradient(135deg, #293854 0%, #4a6fa5 100%);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -105,6 +108,9 @@
             width: 100%;
             height: 100%;
             object-fit: contain;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 50%;
+            padding: 12px;
         }
 
         @keyframes pulse {
@@ -528,14 +534,14 @@
         }
 
         .header-logo {
-            width: 75px;
-            height: 75px;
+            width: 85px;
+            height: 85px;
             background: white;
-            border-radius: 14px;
+            border-radius: 16px;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 12px;
+            padding: 8px;
             box-shadow: 
                 0 4px 15px rgba(41, 56, 84, 0.5),
                 0 0 0 4px rgba(41, 56, 84, 0.3),
@@ -899,8 +905,8 @@
             }
 
             .header-logo {
-                width: 65px;
-                height: 65px;
+                width: 75px;
+                height: 75px;
             }
 
             .dashboard-title-main {
