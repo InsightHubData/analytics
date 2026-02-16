@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>InsightHub</title>
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23293854;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%234a6fa5;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='20' fill='url(%23grad)'/%3E%3Cpath d='M20 75 L20 55 L30 50 L30 75 Z' fill='white' opacity='0.95'/%3E%3Cpath d='M38 75 L38 40 L48 35 L48 75 Z' fill='white'/%3E%3Cpath d='M56 75 L56 45 L66 42 L66 75 Z' fill='white' opacity='0.95'/%3E%3Cpath d='M74 75 L74 30 L84 25 L84 75 Z' fill='white' opacity='0.9'/%3E%3Cpath d='M18 35 Q52 20 86 38' stroke='white' stroke-width='3' fill='none' opacity='0.8'/%3E%3Ccircle cx='18' cy='35' r='4' fill='white'/%3E%3Ccircle cx='52' cy='20' r='4' fill='white'/%3E%3Ccircle cx='86' cy='38' r='4' fill='white'/%3E%3C/svg%3E">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%23e8eef5' stroke='%23405a7a' stroke-width='4'/%3E%3Cpath d='M35,70 Q35,45 50,45 T65,70' fill='none' stroke='%23405a7a' stroke-width='6' stroke-linecap='round'/%3E%3Cpath d='M50,45 L50,30' stroke='%23405a7a' stroke-width='6' stroke-linecap='round'/%3E%3Cpath d='M45,35 L50,30 L55,35' fill='none' stroke='%23405a7a' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='35' cy='70' r='4' fill='%23405a7a'/%3E%3Ccircle cx='50' cy='45' r='4' fill='%23405a7a'/%3E%3Ccircle cx='65' cy='70' r='4' fill='%23405a7a'/%3E%3C/svg%3E">
     <link rel="alternate icon" type="image/png" href="logo.png">
     <style>
         * {
@@ -82,50 +82,49 @@
 
         .logo-container {
             position: relative;
-            width: 110px;
-            height: 110px;
-            margin: 0 auto 20px;
+            width: 160px;
+            height: 160px;
+            margin: 0 auto 25px;
         }
 
         .logo {
-            width: 110px;
-            height: 110px;
-            background: linear-gradient(135deg, #293854 0%, #4a6fa5 100%);
+            width: 160px;
+            height: 160px;
+            background: #e8eef5;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             position: relative;
-            box-shadow: 0 10px 30px rgba(41, 56, 84, 0.4);
+            box-shadow: 
+                0 15px 40px rgba(64, 90, 122, 0.3),
+                inset 0 0 0 4px #405a7a;
             animation: pulse 2s ease-in-out infinite;
-            padding: 18px;
+            padding: 25px;
         }
 
         .logo img {
             width: 100%;
             height: 100%;
             object-fit: contain;
-            background: #f8f9fa;
-            border-radius: 50%;
-            padding: 12px;
         }
 
         @keyframes pulse {
             0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
+            50% { transform: scale(1.03); }
         }
 
         .logo::before {
             content: '';
             position: absolute;
-            top: -5px;
-            left: -5px;
-            right: -5px;
-            bottom: -5px;
-            background: linear-gradient(135deg, #293854, #4a6fa5);
+            top: -6px;
+            left: -6px;
+            right: -6px;
+            bottom: -6px;
+            background: linear-gradient(135deg, #405a7a, #5f7a9a);
             border-radius: 50%;
-            opacity: 0.3;
-            animation: rotate 3s linear infinite;
+            opacity: 0.2;
+            animation: rotate 4s linear infinite;
         }
 
         @keyframes rotate {
@@ -510,14 +509,26 @@
         }
 
         .dashboard-header {
-            background: white;
-            padding: 18px 32px;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            background: linear-gradient(135deg, #3d5875 0%, #4a6fa5 100%);
+            padding: 20px 32px;
+            box-shadow: 0 4px 15px rgba(41, 56, 84, 0.2);
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 1px solid #e5e7eb;
+            border-bottom: 3px solid rgba(255, 255, 255, 0.1);
             transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .dashboard-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
         }
 
         .dashboard-header.hidden {
@@ -531,15 +542,25 @@
         }
 
         .header-logo {
-            width: 50px;
-            height: 50px;
-            background: #f8f9fa;
-            border-radius: 10px;
+            width: 55px;
+            height: 55px;
+            background: #e8eef5;
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 8px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            box-shadow: 
+                0 4px 12px rgba(0, 0, 0, 0.15),
+                inset 0 0 0 2px #405a7a;
+            transition: all 0.3s ease;
+        }
+
+        .header-logo:hover {
+            transform: scale(1.05);
+            box-shadow: 
+                0 6px 16px rgba(0, 0, 0, 0.2),
+                inset 0 0 0 2px #405a7a;
         }
 
         .header-logo img {
@@ -557,28 +578,31 @@
 
         .dashboard-title-main {
             font-size: 17px;
-            color: #4b5563;
+            color: #ffffff;
             font-weight: 600;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         .dashboard-title-sub {
             font-size: 13px;
-            color: #6b7280;
+            color: rgba(255, 255, 255, 0.85);
             font-weight: 500;
             margin-left: 30px;
         }
 
         .user-badge {
-            background: linear-gradient(135deg, #293854 0%, #4a6fa5 100%);
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
             color: white;
             padding: 8px 16px;
             border-radius: 20px;
             font-size: 13px;
             font-weight: 600;
-            box-shadow: 0 2px 8px rgba(41, 56, 84, 0.3);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
             display: flex;
             align-items: center;
             gap: 6px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
         }
 
         .user-badge::before {
@@ -587,23 +611,25 @@
         }
 
         .env-indicator {
-            padding: 6px 12px;
+            padding: 7px 14px;
             border-radius: 16px;
             font-size: 12px;
             font-weight: 600;
             display: flex;
             align-items: center;
             gap: 6px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
         }
 
         .env-indicator.production {
-            background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
-            color: #065f46;
+            background: rgba(16, 185, 129, 0.25);
+            color: #d1fae5;
         }
 
         .env-indicator.homologacao {
-            background: linear-gradient(135deg, #ede9fe 0%, #ddd6fe 100%);
-            color: #5b21b6;
+            background: rgba(139, 92, 246, 0.25);
+            color: #ede9fe;
         }
 
         .header-actions {
@@ -614,30 +640,32 @@
 
         .btn-change-env {
             padding: 10px 20px;
-            background: linear-gradient(135deg, #293854 0%, #4a6fa5 100%);
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
             color: white;
-            border: none;
+            border: 1px solid rgba(255, 255, 255, 0.3);
             border-radius: 8px;
             cursor: pointer;
             font-weight: 600;
             transition: all 0.3s;
             font-size: 14px;
-            box-shadow: 0 2px 8px rgba(41, 56, 84, 0.3);
             display: flex;
             align-items: center;
             gap: 6px;
         }
 
         .btn-change-env:hover {
+            background: rgba(255, 255, 255, 0.3);
             transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(41, 56, 84, 0.4);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         }
 
         .btn-fullscreen {
             padding: 10px 16px;
-            background: #f3f4f6;
-            color: #6b7280;
-            border: none;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.25);
             border-radius: 8px;
             cursor: pointer;
             font-weight: 600;
@@ -648,8 +676,8 @@
         }
 
         .btn-fullscreen:hover {
-            background: #e5e7eb;
-            color: #374151;
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-2px);
         }
 
         .btn-logout {
@@ -670,7 +698,7 @@
         }
 
         .dashboard-content {
-            height: calc(100vh - 70px);
+            height: calc(100vh - 79px);
             padding: 0;
             position: relative;
             transition: height 0.3s ease;
@@ -808,25 +836,38 @@
         }
 
         .spinner {
-            width: 60px;
-            height: 60px;
-            margin: 0 auto 25px;
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 30px;
             position: relative;
             display: flex;
             align-items: center;
             justify-content: center;
         }
 
-        .spinner::before {
-            content: '📊';
-            font-size: 40px;
-            position: absolute;
-            animation: spinIcon 2s ease-in-out infinite;
+        .spinner-logo {
+            width: 80px;
+            height: 80px;
+            background: #e8eef5;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px;
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 4px 15px rgba(64, 90, 122, 0.2);
+            animation: logoFloat 2s ease-in-out infinite;
         }
 
-        @keyframes spinIcon {
-            0%, 100% { transform: rotate(0deg) scale(1); }
-            50% { transform: rotate(180deg) scale(1.2); }
+        .spinner-logo svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        @keyframes logoFloat {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-10px) scale(1.05); }
         }
 
         .spinner::after {
@@ -834,23 +875,40 @@
             position: absolute;
             width: 100%;
             height: 100%;
-            border: 3px solid transparent;
-            border-top-color: #293854;
-            border-right-color: #4a6fa5;
+            border: 4px solid transparent;
+            border-top-color: #405a7a;
+            border-right-color: #5f7a9a;
             border-radius: 50%;
-            animation: spin 1.5s linear infinite;
+            animation: spinRing 1.2s linear infinite;
         }
 
-        @keyframes spin {
+        @keyframes spinRing {
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
 
+        .spinner::before {
+            content: '';
+            position: absolute;
+            width: 80%;
+            height: 80%;
+            border: 3px solid transparent;
+            border-bottom-color: #6b8cb0;
+            border-left-color: #7a9bbe;
+            border-radius: 50%;
+            animation: spinRingReverse 1.5s linear infinite;
+        }
+
+        @keyframes spinRingReverse {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(-360deg); }
+        }
+
         .loading-text {
-            font-size: 17px;
+            font-size: 18px;
             font-weight: 600;
             margin-top: 10px;
-            background: linear-gradient(135deg, #293854 0%, #4a6fa5 100%);
+            background: linear-gradient(135deg, #405a7a 0%, #5f7a9a 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -874,6 +932,17 @@
                 padding: 35px 28px;
             }
 
+            .logo-container {
+                width: 130px;
+                height: 130px;
+            }
+
+            .logo {
+                width: 130px;
+                height: 130px;
+                padding: 20px;
+            }
+
             h1 {
                 font-size: 24px;
             }
@@ -882,6 +951,12 @@
                 padding: 14px 20px;
                 flex-wrap: wrap;
                 gap: 10px;
+            }
+
+            .header-logo {
+                width: 45px;
+                height: 45px;
+                padding: 8px;
             }
 
             .user-info {
@@ -1049,7 +1124,18 @@
         </div>
         <div class="dashboard-content" id="dashboardContent">
             <div class="loading" id="loading">
-                <div class="spinner"></div>
+                <div class="spinner">
+                    <div class="spinner-logo">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                            <path d="M35,70 Q35,45 50,45 T65,70" fill="none" stroke="#405a7a" stroke-width="6" stroke-linecap="round"/>
+                            <path d="M50,45 L50,30" stroke="#405a7a" stroke-width="6" stroke-linecap="round"/>
+                            <path d="M45,35 L50,30 L55,35" fill="none" stroke="#405a7a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="35" cy="70" r="4" fill="#405a7a"/>
+                            <circle cx="50" cy="45" r="4" fill="#405a7a"/>
+                            <circle cx="65" cy="70" r="4" fill="#405a7a"/>
+                        </svg>
+                    </div>
+                </div>
                 <div class="loading-text">Preparando seus insights...</div>
                 <div class="loading-subtext">Aguarde um momento</div>
             </div>
