@@ -82,9 +82,6 @@
             transform: translateY(-5px);
         }
 
-        /* =============================================
-           LOGO DA PÁGINA DE LOGIN
-           ============================================= */
         .logo-container {
             position: relative;
             width: 160px;
@@ -259,18 +256,12 @@
             transition: left 0.5s;
         }
 
-        .btn-login:hover::before {
-            left: 100%;
-        }
-
+        .btn-login:hover::before { left: 100%; }
         .btn-login:hover {
             transform: translateY(-2px);
             box-shadow: 0 8px 25px rgba(41, 56, 84, 0.5);
         }
-
-        .btn-login:active {
-            transform: translateY(0);
-        }
+        .btn-login:active { transform: translateY(0); }
 
         .error-message {
             background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
@@ -396,9 +387,7 @@
             box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
         }
 
-        .env-info {
-            flex: 1;
-        }
+        .env-info { flex: 1; }
 
         .env-title {
             display: flex;
@@ -423,15 +412,8 @@
             letter-spacing: 0.5px;
         }
 
-        .env-option.production .env-badge {
-            background: #d1fae5;
-            color: #065f46;
-        }
-
-        .env-option.homologacao .env-badge {
-            background: #ede9fe;
-            color: #5b21b6;
-        }
+        .env-option.production .env-badge { background: #d1fae5; color: #065f46; }
+        .env-option.homologacao .env-badge { background: #ede9fe; color: #5b21b6; }
 
         .env-description {
             color: #6b7280;
@@ -457,9 +439,7 @@
             transition: all 0.3s ease;
         }
 
-        .btn-back:hover {
-            background: #e5e7eb;
-        }
+        .btn-back:hover { background: #e5e7eb; }
 
         .btn-continue {
             flex: 2;
@@ -488,15 +468,11 @@
             transition: left 0.5s;
         }
 
-        .btn-continue:hover::before {
-            left: 100%;
-        }
-
+        .btn-continue:hover::before { left: 100%; }
         .btn-continue:hover {
             transform: translateY(-2px);
             box-shadow: 0 8px 25px rgba(41, 56, 84, 0.5);
         }
-
         .btn-continue:disabled {
             opacity: 0.5;
             cursor: not-allowed;
@@ -543,14 +519,12 @@
             background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
         }
 
-        .dashboard-header.hidden {
-            display: none;
-        }
+        .dashboard-header.hidden { display: none; }
 
         .user-info {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 8px;
         }
 
         .header-logo {
@@ -572,9 +546,7 @@
 
         .header-logo:hover {
             transform: scale(1.06);
-            box-shadow: 
-                0 6px 18px rgba(0, 0, 0, 0.25),
-                inset 0 0 0 3px #405a7a;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25), inset 0 0 0 3px #405a7a;
         }
 
         .header-logo img {
@@ -623,19 +595,35 @@
             line-height: 1.2;
         }
 
+        /* =============================================
+           TODOS OS ITENS DO HEADER — MESMA ALTURA, FONTE E PADDING
+           Aplica-se a: badge usuário, indicador ambiente, trocar ambiente, expandir, sair
+           ============================================= */
+        .user-badge,
+        .env-indicator,
+        .btn-change-env,
+        .btn-fullscreen,
+        .btn-logout {
+            height: 36px;
+            padding: 0 14px;
+            border-radius: 8px;
+            font-size: 12px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            white-space: nowrap;
+            cursor: default;
+        }
+
+        /* Badge — usuário */
         .user-badge {
             background: rgba(255, 255, 255, 0.18);
             backdrop-filter: blur(10px);
             color: white;
-            padding: 6px 12px;
-            border-radius: 16px;
-            font-size: 12px;
-            font-weight: 600;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            display: flex;
-            align-items: center;
-            gap: 5px;
             border: 1px solid rgba(255, 255, 255, 0.25);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
 
         .user-badge::before {
@@ -643,16 +631,10 @@
             font-size: 12px;
         }
 
+        /* Indicador de ambiente */
         .env-indicator {
-            padding: 5px 11px;
-            border-radius: 12px;
-            font-size: 11px;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            border: 1px solid rgba(255, 255, 255, 0.25);
             backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.25);
         }
 
         .env-indicator.production {
@@ -665,31 +647,12 @@
             color: #ede9fe;
         }
 
-        .header-actions {
-            display: flex;
-            gap: 8px;
-            align-items: center;
-        }
-
-        /* =============================================
-           BOTÕES DO HEADER — MESMO TAMANHO
-           ============================================= */
+        /* Botões clicáveis — cursor pointer */
         .btn-change-env,
         .btn-fullscreen,
         .btn-logout {
-            /* Dimensões uniformes */
-            height: 36px;
-            padding: 0 14px;
-            border-radius: 8px;
             cursor: pointer;
-            font-weight: 600;
-            font-size: 12px;
             transition: all 0.3s;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 5px;
-            white-space: nowrap;
         }
 
         .btn-change-env {
@@ -711,8 +674,6 @@
             color: white;
             border: 1px solid rgba(255, 255, 255, 0.2);
             font-size: 16px;
-            /* Ícone centralizado — sem padding assimétrico */
-            padding: 0 12px;
         }
 
         .btn-fullscreen:hover {
@@ -732,6 +693,12 @@
             box-shadow: 0 4px 12px rgba(239, 68, 68, 0.4);
         }
 
+        .header-actions {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
         .dashboard-content {
             height: calc(100vh - 70px);
             padding: 0;
@@ -739,9 +706,7 @@
             transition: height 0.3s ease;
         }
 
-        .dashboard-content.fullheight {
-            height: 100vh;
-        }
+        .dashboard-content.fullheight { height: 100vh; }
 
         .btn-minimize {
             position: fixed;
@@ -770,9 +735,7 @@
             transform: scale(1.08);
         }
 
-        .btn-minimize.show {
-            display: flex;
-        }
+        .btn-minimize.show { display: flex; }
 
         .unavailable-container {
             position: absolute;
@@ -855,26 +818,20 @@
         }
 
         /* =============================================
-           LOADING / SPINNER — CENTRALIZAÇÃO CORRIGIDA
-           O logo NÃO sobe/desce sozinho — apenas os anéis giram.
-           O conjunto inteiro sobe/desce junto (logoFloat aplicado ao .spinner).
+           LOADING / SPINNER — CENTRALIZADO
            ============================================= */
         .loading {
             position: absolute;
             top: 50%;
             left: 50%;
-            /* Centralização perfeita: ancora no centro e não se move */
             transform: translate(-50%, -50%);
             text-align: center;
             color: #6b7280;
-            /* Largura fixa para o texto não quebrar */
             width: 240px;
-            /* margin negativo compensa metade da altura aproximada (spinner+texto) */
             margin-top: -70px;
         }
 
         .spinner {
-            /* Container quadrado — anéis e logo compartilham o mesmo centro */
             width: 120px;
             height: 120px;
             margin: 0 auto 20px;
@@ -882,11 +839,9 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            /* Animação de flutuar aplicada aqui — move logo + anéis juntos */
             animation: logoFloat 2s ease-in-out infinite;
         }
 
-        /* Logo centralizado absoluto dentro do spinner */
         .spinner-logo {
             width: 85px;
             height: 85px;
@@ -895,40 +850,33 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            /* Padding pequeno para imagem não colar na borda */
             padding: 14px;
             position: absolute;
             top: 50%;
             left: 50%;
-            /* Centralização absoluta perfeita */
             transform: translate(-50%, -50%);
             z-index: 2;
             box-shadow: 
                 0 4px 15px rgba(64, 90, 122, 0.2),
                 inset 0 0 0 4px #405a7a;
-            /* SEM animação própria — quem flutua é o .spinner pai */
         }
 
         .spinner-logo img {
             width: 100%;
             height: 100%;
             object-fit: contain;
-            /* Sem margin-top — centralizado pelo padding do pai */
             display: block;
         }
 
-        /* Animação de flutuar — aplicada no .spinner, move tudo junto */
         @keyframes logoFloat {
             0%, 100% { transform: translateY(0); }
             50%       { transform: translateY(-10px); }
         }
 
-        /* Anel externo girando */
         .spinner::after {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
+            top: 0; left: 0;
             width: 100%;
             height: 100%;
             border: 4px solid transparent;
@@ -943,17 +891,12 @@
             100% { transform: rotate(360deg); }
         }
 
-        /* Anel interno girando no sentido contrário */
         .spinner::before {
             content: '';
             position: absolute;
-            /* Centralizado em relação ao .spinner */
-            top: 50%;
-            left: 50%;
-            width: 80%;
-            height: 80%;
-            margin-top: -40%;
-            margin-left: -40%;
+            top: 50%; left: 50%;
+            width: 80%; height: 80%;
+            margin-top: -40%; margin-left: -40%;
             border: 3px solid transparent;
             border-bottom-color: #6b8cb0;
             border-left-color: #7a9bbe;
@@ -989,67 +932,132 @@
             font-weight: 400;
         }
 
+        /* =============================================
+           AVISO DE INATIVIDADE
+           ============================================= */
+        .inactivity-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.65);
+            backdrop-filter: blur(6px);
+            z-index: 99999;
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .inactivity-overlay.show {
+            display: flex;
+        }
+
+        .inactivity-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px 36px;
+            text-align: center;
+            max-width: 380px;
+            width: 90%;
+            box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+            animation: slideIn 0.35s ease;
+        }
+
+        .inactivity-icon {
+            font-size: 52px;
+            margin-bottom: 16px;
+        }
+
+        .inactivity-card h3 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1a1a2e;
+            margin-bottom: 8px;
+        }
+
+        .inactivity-card p {
+            font-size: 14px;
+            color: #6b7280;
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+
+        .inactivity-countdown {
+            font-size: 28px;
+            font-weight: 700;
+            color: #ef4444;
+            margin-bottom: 24px;
+        }
+
+        .inactivity-actions {
+            display: flex;
+            gap: 12px;
+        }
+
+        .btn-stay {
+            flex: 1;
+            padding: 13px;
+            background: linear-gradient(135deg, #293854 0%, #4a6fa5 100%);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(41, 56, 84, 0.4);
+        }
+
+        .btn-stay:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(41, 56, 84, 0.5);
+        }
+
+        .btn-leave {
+            flex: 1;
+            padding: 13px;
+            background: #f3f4f6;
+            color: #374151;
+            border: none;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-leave:hover { background: #e5e7eb; }
+
+        /* Barra de progresso da contagem regressiva */
+        .inactivity-progress {
+            width: 100%;
+            height: 4px;
+            background: #e5e7eb;
+            border-radius: 2px;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+
+        .inactivity-progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #ef4444, #dc2626);
+            border-radius: 2px;
+            transition: width 1s linear;
+        }
+
         @media (max-width: 768px) {
-            .login-card, .environment-card {
-                padding: 35px 28px;
-            }
-
-            .logo-container {
-                width: 140px;
-                height: 140px;
-            }
-
-            .logo {
-                width: 140px;
-                height: 140px;
-                padding: 8px;
-            }
-
-            h1 {
-                font-size: 24px;
-            }
-
-            .dashboard-header {
-                padding: 6px 16px;
-                flex-wrap: wrap;
-                gap: 8px;
-            }
-
-            .header-logo {
-                width: 40px;
-                height: 40px;
-                padding: 6px;
-            }
-
-            .user-info {
-                gap: 8px;
-                flex-wrap: wrap;
-            }
-
-            .dashboard-title-main {
-                font-size: 13px;
-            }
-
-            .dashboard-title-sub {
-                font-size: 10px;
-            }
-
-            .user-badge {
-                font-size: 11px;
-                padding: 5px 10px;
-            }
-
-            .env-actions {
-                flex-direction: column;
-            }
-
-            .btn-back, .btn-continue {
-                width: 100%;
-            }
-
-            .btn-change-env,
-            .btn-fullscreen,
-            .btn-logout {
+            .login-card, .environment-card { padding: 35px 28px; }
+            .logo-container { width: 140px; height: 140px; }
+            .logo { width: 140px; height: 140px; padding: 8px; }
+            h1 { font-size: 24px; }
+            .dashboard-header { padding: 6px 16px; flex-wrap: wrap; gap: 8px; }
+            .header-logo { width: 40px; height: 40px; padding: 6px; }
+            .user-info { gap: 6px; flex-wrap: wrap; }
+            .dashboard-title-main { font-size: 13px; }
+            .dashboard-title-sub { font-size: 10px; }
+            .env-actions { flex-direction: column; }
+            .btn-back, .btn-continue { width: 100%; }
+            .user-badge, .env-indicator,
+            .btn-change-env, .btn-fullscreen, .btn-logout {
                 height: 32px;
                 padding: 0 10px;
                 font-size: 11px;
@@ -1069,6 +1077,23 @@
     <div class="particle" style="left: 70%; animation-duration: 22s; animation-delay: 1s;"></div>
     <div class="particle" style="left: 90%; animation-duration: 16s; animation-delay: 3s;"></div>
 
+    <!-- Overlay de inatividade -->
+    <div class="inactivity-overlay" id="inactivityOverlay">
+        <div class="inactivity-card">
+            <div class="inactivity-icon">⏱️</div>
+            <h3>Sessão por encerrar</h3>
+            <p>Nenhuma atividade detectada. Você será desconectado em:</p>
+            <div class="inactivity-countdown" id="inactivityCountdown">30</div>
+            <div class="inactivity-progress">
+                <div class="inactivity-progress-bar" id="inactivityBar" style="width:100%"></div>
+            </div>
+            <div class="inactivity-actions">
+                <button class="btn-stay" onclick="keepSession()">Continuar sessão</button>
+                <button class="btn-leave" onclick="logout()">Sair agora</button>
+            </div>
+        </div>
+    </div>
+
     <div class="container" id="loginContainer">
         <div class="login-card">
             <div class="logo-container">
@@ -1087,13 +1112,7 @@
                 <div class="input-group">
                     <label for="username">Usuário</label>
                     <div class="input-wrapper">
-                        <input 
-                            type="text" 
-                            id="username" 
-                            placeholder="Digite seu usuário" 
-                            required
-                            autocomplete="username"
-                            aria-label="Usuário">
+                        <input type="text" id="username" placeholder="Digite seu usuário" required autocomplete="username" aria-label="Usuário">
                         <span class="input-icon">👤</span>
                     </div>
                 </div>
@@ -1101,21 +1120,13 @@
                 <div class="input-group">
                     <label for="password">Senha</label>
                     <div class="input-wrapper">
-                        <input 
-                            type="password" 
-                            id="password" 
-                            placeholder="Digite sua senha" 
-                            required
-                            autocomplete="current-password"
-                            aria-label="Senha">
+                        <input type="password" id="password" placeholder="Digite sua senha" required autocomplete="current-password" aria-label="Senha">
                         <span class="input-icon">🔒</span>
                         <span class="password-toggle" onclick="togglePassword()" role="button" tabindex="0" aria-label="Mostrar senha">👁️</span>
                     </div>
                 </div>
 
-                <button type="submit" class="btn-login">
-                    Entrar no Portal
-                </button>
+                <button type="submit" class="btn-login">Entrar no Portal</button>
             </form>
         </div>
     </div>
@@ -1154,20 +1165,14 @@
             </div>
 
             <div class="env-actions">
-                <button class="btn-back" onclick="backToLogin()">
-                    Voltar
-                </button>
-                <button class="btn-continue" id="btnContinue" onclick="continueToEnvironment()" disabled>
-                    Acessar Dashboard
-                </button>
+                <button class="btn-back" onclick="backToLogin()">Voltar</button>
+                <button class="btn-continue" id="btnContinue" onclick="continueToEnvironment()" disabled>Acessar Dashboard</button>
             </div>
         </div>
     </div>
 
     <div class="dashboard-container" id="dashboardContainer">
-        <button class="btn-minimize" id="btnMinimize" onclick="toggleFullscreen()" title="Sair da tela cheia">
-            ⛶
-        </button>
+        <button class="btn-minimize" id="btnMinimize" onclick="toggleFullscreen()" title="Sair da tela cheia">⛶</button>
 
         <div class="dashboard-header" id="dashboardHeader">
             <div class="user-info">
@@ -1187,15 +1192,9 @@
                 <div class="env-indicator" id="envIndicator"></div>
             </div>
             <div class="header-actions">
-                <button class="btn-change-env" onclick="changeEnvironment()">
-                    🔄 Trocar Ambiente
-                </button>
-                <button class="btn-fullscreen" onclick="toggleFullscreen()" title="Tela cheia">
-                    ⛶
-                </button>
-                <button class="btn-logout" onclick="logout()">
-                    Sair
-                </button>
+                <button class="btn-change-env" onclick="changeEnvironment()">🔄 Trocar Ambiente</button>
+                <button class="btn-fullscreen" onclick="toggleFullscreen()" title="Tela cheia">⛶</button>
+                <button class="btn-logout" onclick="logout()">Sair</button>
             </div>
         </div>
 
@@ -1212,12 +1211,8 @@
             <div class="unavailable-container" id="unavailableContainer" style="display: none;">
                 <div class="unavailable-icon"></div>
                 <h2 class="unavailable-title">Ambiente Indisponível</h2>
-                <p class="unavailable-message">
-                    Este dashboard ainda não foi configurado.
-                </p>
-                <button class="btn-back-from-unavailable" onclick="changeEnvironment()">
-                    ← Voltar
-                </button>
+                <p class="unavailable-message">Este dashboard ainda não foi configurado.</p>
+                <button class="btn-back-from-unavailable" onclick="changeEnvironment()">← Voltar</button>
             </div>
             <iframe id="dashboardFrame" style="display: none;"></iframe>
         </div>
@@ -1277,6 +1272,74 @@
         let currentEnvironment = null;
         let isFullscreen = false;
 
+        /* =============================================
+           SISTEMA DE INATIVIDADE — 5 MINUTOS
+           Aviso aparece 30 segundos antes; se não reagir, faz logout.
+           ============================================= */
+        const INACTIVITY_TIMEOUT = 5 * 60 * 1000;   // 5 minutos em ms
+        const WARNING_DURATION   = 30;                // segundos de aviso
+
+        let inactivityTimer   = null;
+        let countdownTimer    = null;
+        let countdownSeconds  = WARNING_DURATION;
+        let isLoggedIn        = false;
+
+        // Eventos que reiniciam o timer
+        const ACTIVITY_EVENTS = ['mousemove', 'mousedown', 'keydown', 'touchstart', 'scroll', 'click'];
+
+        function resetInactivityTimer() {
+            if (!isLoggedIn) return;
+            // Se o aviso estiver visível, não reinicia pelo simples movimento
+            if (document.getElementById('inactivityOverlay').classList.contains('show')) return;
+            clearTimeout(inactivityTimer);
+            inactivityTimer = setTimeout(showInactivityWarning, INACTIVITY_TIMEOUT);
+        }
+
+        function startInactivityWatcher() {
+            isLoggedIn = true;
+            ACTIVITY_EVENTS.forEach(e => document.addEventListener(e, resetInactivityTimer, { passive: true }));
+            resetInactivityTimer();
+        }
+
+        function stopInactivityWatcher() {
+            isLoggedIn = false;
+            clearTimeout(inactivityTimer);
+            clearInterval(countdownTimer);
+            ACTIVITY_EVENTS.forEach(e => document.removeEventListener(e, resetInactivityTimer));
+        }
+
+        function showInactivityWarning() {
+            const overlay    = document.getElementById('inactivityOverlay');
+            const countdownEl = document.getElementById('inactivityCountdown');
+            const bar        = document.getElementById('inactivityBar');
+
+            countdownSeconds = WARNING_DURATION;
+            countdownEl.textContent = countdownSeconds;
+            bar.style.width = '100%';
+            overlay.classList.add('show');
+
+            countdownTimer = setInterval(() => {
+                countdownSeconds--;
+                countdownEl.textContent = countdownSeconds;
+                bar.style.width = ((countdownSeconds / WARNING_DURATION) * 100) + '%';
+
+                if (countdownSeconds <= 0) {
+                    clearInterval(countdownTimer);
+                    overlay.classList.remove('show');
+                    logout();
+                }
+            }, 1000);
+        }
+
+        function keepSession() {
+            clearInterval(countdownTimer);
+            document.getElementById('inactivityOverlay').classList.remove('show');
+            resetInactivityTimer();
+        }
+
+        /* =============================================
+           AUTENTICAÇÃO E NAVEGAÇÃO
+           ============================================= */
         function togglePassword() {
             const passwordInput = document.getElementById('password');
             const toggle = document.querySelector('.password-toggle');
@@ -1304,6 +1367,7 @@
                 currentEnvironment = 'production';
                 errorMessage.style.display = 'none';
                 document.getElementById('loginContainer').style.display = 'none';
+                startInactivityWatcher();
                 showDashboard(environments.production);
             } else {
                 errorMessage.style.display = 'block';
@@ -1318,9 +1382,7 @@
         });
 
         function selectEnvironment(env) {
-            document.querySelectorAll('.env-option').forEach(opt => {
-                opt.classList.remove('selected');
-            });
+            document.querySelectorAll('.env-option').forEach(opt => opt.classList.remove('selected'));
             const selectedOption = document.querySelector(`.env-option.${env}`);
             selectedOption.classList.add('selected');
             selectedOption.querySelector('input').checked = true;
@@ -1330,20 +1392,18 @@
 
         function continueToEnvironment() {
             if (!currentEnvironment) return;
-            const env = environments[currentEnvironment];
             document.getElementById('environmentSelector').style.display = 'none';
-            showDashboard(env);
+            showDashboard(environments[currentEnvironment]);
         }
 
         function showDashboard(env) {
-            const dashboardContainer = document.getElementById('dashboardContainer');
-            const frame = document.getElementById('dashboardFrame');
-            const loading = document.getElementById('loading');
+            const dashboardContainer  = document.getElementById('dashboardContainer');
+            const frame               = document.getElementById('dashboardFrame');
+            const loading             = document.getElementById('loading');
             const unavailableContainer = document.getElementById('unavailableContainer');
-            
-            const userData = usuarios[currentUser];
-            const dashboardUrl = userData.powerbi[currentEnvironment];
-            
+            const userData            = usuarios[currentUser];
+            const dashboardUrl        = userData.powerbi[currentEnvironment];
+
             document.getElementById('dashboardTitleMain').textContent = userData.titulo;
             const estrategiaEl = document.getElementById('dashboardTitleEstrategia');
             if (userData.estrategia) {
@@ -1354,13 +1414,13 @@
             }
             document.getElementById('dashboardTitleSub').textContent = userData.subtitulo;
             document.getElementById('userBadge').textContent = userData.nome;
-            
+
             const envIndicator = document.getElementById('envIndicator');
             envIndicator.textContent = currentEnvironment === 'production' ? '✓ Produção' : '🔬 Homologação';
             envIndicator.className = 'env-indicator ' + currentEnvironment;
-            
+
             dashboardContainer.style.display = 'block';
-            
+
             if (!dashboardUrl || dashboardUrl.trim() === '' || dashboardUrl.includes('SEU_LINK')) {
                 loading.style.display = 'none';
                 frame.style.display = 'none';
@@ -1402,30 +1462,42 @@
         }
 
         function logout() {
+            stopInactivityWatcher();
+            document.getElementById('inactivityOverlay').classList.remove('show');
+
             currentUser = null;
             currentEnvironment = null;
             isFullscreen = false;
+
             document.getElementById('dashboardContainer').style.display = 'none';
             document.getElementById('loginContainer').style.display = 'block';
             document.getElementById('username').value = '';
             document.getElementById('password').value = '';
             document.getElementById('errorMessage').style.display = 'none';
+
             const frame = document.getElementById('dashboardFrame');
             frame.src = '';
             frame.style.display = 'none';
             document.getElementById('loading').style.display = 'block';
-            if (document.fullscreenElement) {
-                document.exitFullscreen();
-            }
+
+            if (document.fullscreenElement) document.exitFullscreen();
             document.getElementById('dashboardHeader').classList.remove('hidden');
             document.getElementById('dashboardContent').classList.remove('fullheight');
             document.getElementById('btnMinimize').classList.remove('show');
+
+            // Reseta seleção de ambiente
+            document.querySelectorAll('.env-option').forEach(opt => {
+                opt.classList.remove('selected');
+                opt.querySelector('input').checked = false;
+            });
+            document.getElementById('btnContinue').disabled = true;
         }
 
         function toggleFullscreen() {
-            const header = document.getElementById('dashboardHeader');
-            const content = document.getElementById('dashboardContent');
+            const header    = document.getElementById('dashboardHeader');
+            const content   = document.getElementById('dashboardContent');
             const btnMinimize = document.getElementById('btnMinimize');
+
             if (!document.fullscreenElement) {
                 document.documentElement.requestFullscreen();
                 header.classList.add('hidden');
@@ -1451,9 +1523,7 @@
         });
 
         document.querySelector('.password-toggle').addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                togglePassword();
-            }
+            if (e.key === 'Enter') togglePassword();
         });
     </script>
 </body>
