@@ -74,22 +74,32 @@
             text-align: center;
             transform: translateY(0);
             transition: transform 0.3s ease;
+            /* Centraliza o conteúdo verticalmente */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .login-card:hover {
             transform: translateY(-5px);
         }
 
+        /* =============================================
+           LOGO DA PÁGINA DE LOGIN — MAIOR E CENTRALIZADA
+           ============================================= */
         .logo-container {
             position: relative;
-            width: 160px;
-            height: 160px;
-            margin: 0 auto 25px;
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .logo {
-            width: 160px;
-            height: 160px;
+            width: 200px;
+            height: 200px;
             background: #e8eef5;
             border-radius: 50%;
             display: flex;
@@ -100,7 +110,8 @@
                 0 15px 40px rgba(64, 90, 122, 0.3),
                 inset 0 0 0 7px #405a7a;
             animation: pulse 2s ease-in-out infinite;
-            padding: 25px;
+            /* Padding ampliado para logo maior */
+            padding: 28px;
         }
 
         .logo img {
@@ -138,6 +149,7 @@
             font-size: 26px;
             font-weight: 700;
             letter-spacing: -0.5px;
+            width: 100%;
         }
 
         .subtitle {
@@ -145,12 +157,14 @@
             margin-bottom: 28px;
             font-size: 14px;
             font-weight: 400;
+            width: 100%;
         }
 
         .input-group {
             margin-bottom: 20px;
             text-align: left;
             position: relative;
+            width: 100%;
         }
 
         label {
@@ -268,6 +282,7 @@
             font-weight: 500;
             border: 1px solid #fca5a5;
             animation: shake 0.5s;
+            width: 100%;
         }
 
         @keyframes shake {
@@ -276,6 +291,7 @@
             75% { transform: translateX(10px); }
         }
 
+        /* =================== ENVIRONMENT SELECTOR =================== */
         .environment-selector {
             display: none;
             width: 100%;
@@ -287,14 +303,8 @@
         }
 
         @keyframes slideIn {
-            from { 
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to { 
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         .environment-card {
@@ -492,6 +502,7 @@
             transform: none;
         }
 
+        /* =================== DASHBOARD =================== */
         .dashboard-container {
             display: none;
             width: 100vw;
@@ -508,14 +519,18 @@
             to { opacity: 1; }
         }
 
+        /* =============================================
+           CABEÇALHO — COMPACTO
+           ============================================= */
         .dashboard-header {
             background: linear-gradient(135deg, #3d5875 0%, #4a6fa5 100%);
-            padding: 16px 32px;
+            /* Padding reduzido para cabeçalho mais fino */
+            padding: 8px 24px;
             box-shadow: 0 4px 15px rgba(41, 56, 84, 0.2);
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 3px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 2px solid rgba(255, 255, 255, 0.1);
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
@@ -538,29 +553,34 @@
         .user-info {
             display: flex;
             align-items: center;
-            gap: 18px;
+            gap: 12px;
         }
 
+        /* =============================================
+           LOGO DO CABEÇALHO — QUADRADA, BORDAS ARREDONDADAS
+           ============================================= */
         .header-logo {
-            width: 60px;
-            height: 60px;
+            width: 52px;
+            height: 52px;
             background: #e8eef5;
-            border-radius: 50%;
+            /* Quadrada com bordas arredondadas — mesma padronização dos botões */
+            border-radius: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 11px;
+            padding: 8px;
             box-shadow: 
-                0 6px 20px rgba(0, 0, 0, 0.2),
-                inset 0 0 0 4px #405a7a;
+                0 4px 14px rgba(0, 0, 0, 0.2),
+                inset 0 0 0 3px #405a7a;
             transition: all 0.3s ease;
+            flex-shrink: 0;
         }
 
         .header-logo:hover {
-            transform: scale(1.05);
+            transform: scale(1.06);
             box-shadow: 
-                0 8px 24px rgba(0, 0, 0, 0.25),
-                inset 0 0 0 4px #405a7a;
+                0 6px 18px rgba(0, 0, 0, 0.25),
+                inset 0 0 0 3px #405a7a;
         }
 
         .header-logo img {
@@ -569,56 +589,72 @@
             object-fit: contain;
         }
 
+        /* =============================================
+           TÍTULO DO CABEÇALHO — INSIGHTHUB MENOR,
+           SUBTÍTULO BEM PEQUENO, PORTAL ABAIXO
+           ============================================= */
         .dashboard-title {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            gap: 3px;
+            gap: 1px;
         }
 
+        /* "InsightHub" — ligeiramente menor */
         .dashboard-title-main {
-            font-size: 19px;
+            font-size: 15px;
             color: #ffffff;
-            font-weight: 600;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            font-weight: 700;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+            line-height: 1.2;
         }
 
+        /* "| Estratégia orientada por dados" — bem pequeno */
+        .dashboard-title-estrategia {
+            font-size: 9px;
+            color: rgba(255, 255, 255, 0.65);
+            font-weight: 400;
+            letter-spacing: 0.2px;
+            line-height: 1.1;
+        }
+
+        /* "Portal de Indicadores" — abaixo de InsightHub */
         .dashboard-title-sub {
-            font-size: 14px;
-            color: rgba(255, 255, 255, 0.85);
+            font-size: 11px;
+            color: rgba(255, 255, 255, 0.82);
             font-weight: 500;
-            margin-left: 30px;
+            line-height: 1.2;
         }
 
         .user-badge {
-            background: rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.18);
             backdrop-filter: blur(10px);
             color: white;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 13px;
+            padding: 6px 12px;
+            border-radius: 16px;
+            font-size: 12px;
             font-weight: 600;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
             display: flex;
             align-items: center;
-            gap: 6px;
-            border: 1px solid rgba(255, 255, 255, 0.3);
+            gap: 5px;
+            border: 1px solid rgba(255, 255, 255, 0.25);
         }
 
         .user-badge::before {
             content: '👤';
-            font-size: 14px;
+            font-size: 12px;
         }
 
         .env-indicator {
-            padding: 7px 14px;
-            border-radius: 16px;
-            font-size: 12px;
+            padding: 5px 11px;
+            border-radius: 12px;
+            font-size: 11px;
             font-weight: 600;
             display: flex;
             align-items: center;
-            gap: 6px;
-            border: 1px solid rgba(255, 255, 255, 0.3);
+            gap: 5px;
+            border: 1px solid rgba(255, 255, 255, 0.25);
             backdrop-filter: blur(10px);
         }
 
@@ -634,35 +670,13 @@
 
         .header-actions {
             display: flex;
-            gap: 12px;
+            gap: 8px;
             align-items: center;
         }
 
         .btn-change-env {
-            padding: 10px 20px;
-            background: rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(10px);
-            color: white;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            border-radius: 8px;
-            cursor: pointer;
-            font-weight: 600;
-            transition: all 0.3s;
-            font-size: 14px;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .btn-change-env:hover {
-            background: rgba(255, 255, 255, 0.3);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-        }
-
-        .btn-fullscreen {
-            padding: 10px 16px;
-            background: rgba(255, 255, 255, 0.15);
+            padding: 7px 14px;
+            background: rgba(255, 255, 255, 0.18);
             backdrop-filter: blur(10px);
             color: white;
             border: 1px solid rgba(255, 255, 255, 0.25);
@@ -670,18 +684,40 @@
             cursor: pointer;
             font-weight: 600;
             transition: all 0.3s;
-            font-size: 20px;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .btn-change-env:hover {
+            background: rgba(255, 255, 255, 0.28);
+            transform: translateY(-1px);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn-fullscreen {
+            padding: 7px 12px;
+            background: rgba(255, 255, 255, 0.13);
+            backdrop-filter: blur(10px);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+            font-size: 17px;
             display: flex;
             align-items: center;
         }
 
         .btn-fullscreen:hover {
-            background: rgba(255, 255, 255, 0.25);
-            transform: translateY(-2px);
+            background: rgba(255, 255, 255, 0.23);
+            transform: translateY(-1px);
         }
 
         .btn-logout {
-            padding: 10px 20px;
+            padding: 7px 14px;
             background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
             color: white;
             border: none;
@@ -689,16 +725,17 @@
             cursor: pointer;
             font-weight: 600;
             transition: all 0.3s;
+            font-size: 12px;
             box-shadow: 0 2px 8px rgba(239, 68, 68, 0.3);
         }
 
         .btn-logout:hover {
-            transform: translateY(-2px);
+            transform: translateY(-1px);
             box-shadow: 0 4px 12px rgba(239, 68, 68, 0.4);
         }
 
         .dashboard-content {
-            height: calc(100vh - 67px);
+            height: calc(100vh - 70px);
             padding: 0;
             position: relative;
             transition: height 0.3s ease;
@@ -713,8 +750,8 @@
             top: 20px;
             right: 20px;
             z-index: 9999;
-            width: 45px;
-            height: 45px;
+            width: 42px;
+            height: 42px;
             background: rgba(255, 255, 255, 0.95);
             color: #293854;
             border: 2px solid #293854;
@@ -722,7 +759,7 @@
             cursor: pointer;
             font-weight: 600;
             transition: all 0.3s;
-            font-size: 20px;
+            font-size: 18px;
             display: none;
             align-items: center;
             justify-content: center;
@@ -733,7 +770,6 @@
             background: #293854;
             color: white;
             transform: scale(1.08);
-            box-shadow: 0 6px 16px rgba(41, 56, 84, 0.3);
         }
 
         .btn-minimize.show {
@@ -752,14 +788,8 @@
         }
 
         @keyframes fadeInScale {
-            from {
-                opacity: 0;
-                transform: translate(-50%, -50%) scale(0.9);
-            }
-            to {
-                opacity: 1;
-                transform: translate(-50%, -50%) scale(1);
-            }
+            from { opacity: 0; transform: translate(-50%, -50%) scale(0.9); }
+            to { opacity: 1; transform: translate(-50%, -50%) scale(1); }
         }
 
         .unavailable-icon {
@@ -936,14 +966,14 @@
             }
 
             .logo-container {
-                width: 130px;
-                height: 130px;
+                width: 160px;
+                height: 160px;
             }
 
             .logo {
-                width: 130px;
-                height: 130px;
-                padding: 20px;
+                width: 160px;
+                height: 160px;
+                padding: 22px;
             }
 
             h1 {
@@ -951,33 +981,33 @@
             }
 
             .dashboard-header {
-                padding: 14px 20px;
+                padding: 6px 16px;
                 flex-wrap: wrap;
-                gap: 10px;
+                gap: 8px;
             }
 
             .header-logo {
-                width: 45px;
-                height: 45px;
-                padding: 8px;
+                width: 40px;
+                height: 40px;
+                padding: 6px;
             }
 
             .user-info {
-                gap: 10px;
+                gap: 8px;
                 flex-wrap: wrap;
             }
 
             .dashboard-title-main {
-                font-size: 16px;
+                font-size: 13px;
             }
 
             .dashboard-title-sub {
-                font-size: 12px;
+                font-size: 10px;
             }
 
             .user-badge {
-                font-size: 12px;
-                padding: 6px 12px;
+                font-size: 11px;
+                padding: 5px 10px;
             }
 
             .env-actions {
@@ -1004,6 +1034,7 @@
 
     <div class="container" id="loginContainer">
         <div class="login-card">
+            <!-- Logo centralizada e maior -->
             <div class="logo-container">
                 <div class="logo">
                     <img src="logo.png" alt="Logo InsightHub">
@@ -1016,7 +1047,7 @@
                 ⚠️ Usuário ou senha incorretos!
             </div>
 
-            <form id="loginForm">
+            <form id="loginForm" style="width:100%;">
                 <div class="input-group">
                     <label for="username">Usuário</label>
                     <div class="input-wrapper">
@@ -1101,15 +1132,25 @@
         <button class="btn-minimize" id="btnMinimize" onclick="toggleFullscreen()" title="Sair da tela cheia">
             ⛶
         </button>
+
+        <!-- Cabeçalho compacto -->
         <div class="dashboard-header" id="dashboardHeader">
             <div class="user-info">
+                <!-- Logo quadrada com border-radius de botão -->
                 <div class="header-logo">
                     <img src="logo.png" alt="Logo InsightHub">
                 </div>
+
+                <!-- Título reestruturado -->
                 <div class="dashboard-title">
+                    <!-- "InsightHub" menor -->
                     <div class="dashboard-title-main" id="dashboardTitleMain">InsightHub</div>
+                    <!-- "| Estratégia orientada por dados" bem pequeno -->
+                    <div class="dashboard-title-estrategia" id="dashboardTitleEstrategia">| Estratégia orientada por dados</div>
+                    <!-- "Portal de Indicadores" abaixo de InsightHub -->
                     <div class="dashboard-title-sub" id="dashboardTitleSub"></div>
                 </div>
+
                 <div class="user-badge" id="userBadge"></div>
                 <div class="env-indicator" id="envIndicator"></div>
             </div>
@@ -1125,6 +1166,7 @@
                 </button>
             </div>
         </div>
+
         <div class="dashboard-content" id="dashboardContent">
             <div class="loading" id="loading">
                 <div class="spinner">
@@ -1172,7 +1214,8 @@
                     production: 'https://app.powerbi.com/view?r=eyJrIjoiZDYwMDk1M2UtY2YwOS00MDdkLTk3MzUtMTI1MzU4YTc1OWY5IiwidCI6IjE0Y2JkNWE3LWVjOTQtNDZiYS1iMzE0LWNjMGZjOTcyYTE2MSIsImMiOjh9',
                     homologacao: ''
                 },
-                titulo: 'InsightHub | Estratégia orientada por dados',
+                titulo: 'InsightHub',
+                estrategia: '| Estratégia orientada por dados',
                 subtitulo: 'Portal de Indicadores',
                 nome: 'Studio casa'
             },
@@ -1183,6 +1226,7 @@
                     homologacao: 'https://app.powerbi.com/view?r=eyJrIjoiOGIyZTVmMTMtYjZiMy00ZDU4LTgxMjAtMjQ1YTVhODI5NDNkIiwidCI6Ijg4OTY3NzBlLTI5YjYtNDNjOC05YjAyLWZjMzhhZDVhMGUyMCJ9'
                 },
                 titulo: 'FOliveira',
+                estrategia: '',
                 subtitulo: 'Dashboard',
                 nome: 'FOliveira'
             },
@@ -1192,7 +1236,8 @@
                     production: 'https://app.powerbi.com/view?r=eyJrIjoiOGIyZTVmMTMtYjZiMy00ZDU4LTgxMjAtMjQ1YTVhODI5NDNkIiwidCI6Ijg4OTY3NzBlLTI5YjYtNDNjOC05YjAyLWZjMzhhZDVhMGUyMCJ9',
                     homologacao: 'https://app.powerbi.com/view?r=eyJrIjoiNWFmMmQ1NTAtMmE2ZS00OTk1LWJhNGEtNmYwYzdiYWE1YmFlIiwidCI6Ijg4OTY3NzBlLTI5YjYtNDNjOC05YjAyLWZjMzhhZDVhMGUyMCJ9'
                 },
-                titulo: 'InsightHub | Estratégia orientada por dados',
+                titulo: 'InsightHub',
+                estrategia: '| Estratégia orientada por dados',
                 subtitulo: 'Portal de Indicadores',
                 nome: 'GVS Grupo'
             }
@@ -1227,13 +1272,11 @@
             const password = document.getElementById('password').value;
             const errorMessage = document.getElementById('errorMessage');
 
-            // Validação
             if (usuarios[username] && usuarios[username].senha === password) {
                 currentUser = username;
-                currentEnvironment = 'production'; // Define produção como padrão
+                currentEnvironment = 'production';
                 errorMessage.style.display = 'none';
                 
-                // Esconde login e vai direto para o dashboard de produção
                 document.getElementById('loginContainer').style.display = 'none';
                 showDashboard(environments.production);
             } else {
@@ -1250,21 +1293,15 @@
         });
 
         function selectEnvironment(env) {
-            // Remove seleção anterior
             document.querySelectorAll('.env-option').forEach(opt => {
                 opt.classList.remove('selected');
             });
 
-            // Adiciona seleção atual
             const selectedOption = document.querySelector(`.env-option.${env}`);
             selectedOption.classList.add('selected');
-            
-            // Marca o radio button
             selectedOption.querySelector('input').checked = true;
 
-            // Habilita botão continuar
             document.getElementById('btnContinue').disabled = false;
-            
             currentEnvironment = env;
         }
 
@@ -1272,11 +1309,7 @@
             if (!currentEnvironment) return;
 
             const env = environments[currentEnvironment];
-            
-            // Esconde seletor de ambiente
             document.getElementById('environmentSelector').style.display = 'none';
-            
-            // Mostra dashboard
             showDashboard(env);
         }
 
@@ -1286,14 +1319,20 @@
             const loading = document.getElementById('loading');
             const unavailableContainer = document.getElementById('unavailableContainer');
             
-            // Pega dados do usuário
             const userData = usuarios[currentUser];
-            
-            // Verifica se o link do ambiente existe
             const dashboardUrl = userData.powerbi[currentEnvironment];
             
-            // Atualiza informações do header
+            // Atualiza título principal
             document.getElementById('dashboardTitleMain').textContent = userData.titulo;
+            // Atualiza linha "| Estratégia..."
+            const estrategiaEl = document.getElementById('dashboardTitleEstrategia');
+            if (userData.estrategia) {
+                estrategiaEl.textContent = userData.estrategia;
+                estrategiaEl.style.display = 'block';
+            } else {
+                estrategiaEl.style.display = 'none';
+            }
+            // Atualiza "Portal de Indicadores"
             document.getElementById('dashboardTitleSub').textContent = userData.subtitulo;
             document.getElementById('userBadge').textContent = userData.nome;
             
@@ -1301,23 +1340,15 @@
             envIndicator.textContent = currentEnvironment === 'production' ? '✓ Produção' : '🔬 Homologação';
             envIndicator.className = 'env-indicator ' + currentEnvironment;
             
-            // Mostra container do dashboard
             dashboardContainer.style.display = 'block';
             
-            // Verifica se o link existe e não está vazio
             if (!dashboardUrl || dashboardUrl.trim() === '' || dashboardUrl.includes('SEU_LINK')) {
-                // Mostra tela de indisponível
                 loading.style.display = 'none';
                 frame.style.display = 'none';
                 unavailableContainer.style.display = 'block';
             } else {
-                // Esconde tela de indisponível
                 unavailableContainer.style.display = 'none';
-                
-                // Carrega iframe com URL específica do usuário e ambiente
                 frame.src = dashboardUrl;
-                
-                // Esconde loading quando iframe carregar
                 frame.onload = function() {
                     loading.style.display = 'none';
                     frame.style.display = 'block';
@@ -1326,31 +1357,21 @@
         }
 
         function changeEnvironment() {
-            // Esconde dashboard
             document.getElementById('dashboardContainer').style.display = 'none';
-            
-            // Esconde tela de indisponível se estiver visível
             document.getElementById('unavailableContainer').style.display = 'none';
-            
-            // Mostra seletor de ambiente
             document.getElementById('environmentSelector').style.display = 'block';
-            
-            // Reseta loading
             document.getElementById('loading').style.display = 'block';
             document.getElementById('dashboardFrame').style.display = 'none';
         }
 
         function backToLogin() {
-            // Se há um dashboard aberto, volta para ele
             if (currentUser && currentEnvironment) {
                 document.getElementById('environmentSelector').style.display = 'none';
                 document.getElementById('dashboardContainer').style.display = 'block';
             } else {
-                // Senão, volta para tela de login
                 document.getElementById('environmentSelector').style.display = 'none';
                 document.getElementById('loginContainer').style.display = 'block';
                 
-                // Limpa seleção
                 document.querySelectorAll('.env-option').forEach(opt => {
                     opt.classList.remove('selected');
                     opt.querySelector('input').checked = false;
@@ -1358,36 +1379,28 @@
                 document.getElementById('btnContinue').disabled = true;
                 currentEnvironment = null;
                 
-                // Limpa formulário
                 document.getElementById('username').value = '';
                 document.getElementById('password').value = '';
             }
         }
 
         function logout() {
-            // Reseta tudo
             currentUser = null;
             currentEnvironment = null;
             isFullscreen = false;
             
-            // Esconde dashboard
             document.getElementById('dashboardContainer').style.display = 'none';
-            
-            // Mostra login
             document.getElementById('loginContainer').style.display = 'block';
             
-            // Limpa formulário
             document.getElementById('username').value = '';
             document.getElementById('password').value = '';
             document.getElementById('errorMessage').style.display = 'none';
             
-            // Reseta iframe
             const frame = document.getElementById('dashboardFrame');
             frame.src = '';
             frame.style.display = 'none';
             document.getElementById('loading').style.display = 'block';
             
-            // Reseta fullscreen
             if (document.fullscreenElement) {
                 document.exitFullscreen();
             }
@@ -1402,14 +1415,12 @@
             const btnMinimize = document.getElementById('btnMinimize');
             
             if (!document.fullscreenElement) {
-                // Entra em fullscreen
                 document.documentElement.requestFullscreen();
                 header.classList.add('hidden');
                 content.classList.add('fullheight');
                 btnMinimize.classList.add('show');
                 isFullscreen = true;
             } else {
-                // Sai do fullscreen
                 document.exitFullscreen();
                 header.classList.remove('hidden');
                 content.classList.remove('fullheight');
@@ -1418,7 +1429,6 @@
             }
         }
 
-        // Detecta quando sai do fullscreen pelo ESC
         document.addEventListener('fullscreenchange', function() {
             if (!document.fullscreenElement && isFullscreen) {
                 document.getElementById('dashboardHeader').classList.remove('hidden');
@@ -1428,7 +1438,6 @@
             }
         });
 
-        // Suporte para Enter na toggle de senha
         document.querySelector('.password-toggle').addEventListener('keypress', function(e) {
             if (e.key === 'Enter') {
                 togglePassword();
